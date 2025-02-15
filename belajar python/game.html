@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiah Valentine</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            overflow: hidden;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .flower-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flowers {
+            display: flex;
+            gap: 20px;
+        }
+        .flower {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: float 3s infinite ease-in-out alternate;
+        }
+        .petal {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: red;
+            border-radius: 50%;
+        }
+        .petal:nth-child(1) { transform: rotate(0deg) translateY(-30px); }
+        .petal:nth-child(2) { transform: rotate(45deg) translateY(-30px); }
+        .petal:nth-child(3) { transform: rotate(90deg) translateY(-30px); }
+        .petal:nth-child(4) { transform: rotate(135deg) translateY(-30px); }
+        .center {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: darkred;
+            border-radius: 50%;
+            top: 30px;
+            left: 30px;
+        }
+        .stem {
+            width: 10px;
+            height: 150px;
+            background: green;
+            position: relative;
+            margin-top: -10px;
+        }
+        .thorns {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid darkgreen;
+        }
+        .thorns:nth-child(1) { top: 20px; left: -5px; transform: rotate(30deg); }
+        .thorns:nth-child(2) { top: 60px; right: -5px; transform: rotate(-30deg); }
+        .thorns:nth-child(3) { top: 100px; left: -5px; transform: rotate(30deg); }
+        .pot {
+            width: 120px;
+            height: 60px;
+            background: brown;
+            border-radius: 10px 10px 0 0;
+            margin-top: -5px;
+        }
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valday Sayangku</h1>
+    <div class="flower-container">
+        <div class="flowers">
+            <div class="flower">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="center"></div>
+            </div>
+            <div class="flower">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="center"></div>
+            </div>
+            <div class="flower">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="center"></div>
+            </div>
+        </div>
+        <div class="stem">
+            <div class="thorns"></div>
+            <div class="thorns"></div>
+            <div class="thorns"></div>
+        </div>
+        <div class="pot"></div>
+    </div>
+</body>
+</html>
